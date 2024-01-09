@@ -1,0 +1,130 @@
+/* Global styling for the body */
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(46, 12, 78);
+    margin: auto;
+    overflow: auto;
+    background: linear-gradient(315deg, rgba(101,0,94,1) 3%, #14477a 38%, #056761 68%, #720606 98%);
+    animation: gradient 50s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+/* Styling for the container and intro section */
+.container .intro {
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* Styling for the container and name section */
+.container .name {  
+    color: white;
+    border-bottom: 3px solid rgb(235, 235, 8);
+    width: fit-content;
+    text-align: center;
+    padding-bottom: 3px;
+    margin: 20px auto;
+}
+
+/* Styling the Student name section */
+.container .names p {
+    font-size: 25px;
+    color: white;
+    margin-top: 0px;
+    margin-left: 45px;
+}
+
+/* Styling for the container and images section */
+.container .images {
+    position: relative;
+    background-attachment: fixed;
+}
+
+/* Styling for the top-left image */
+.container .images .top-left {
+    left: 710px;
+    bottom: 155px;
+    height: 55px;
+    position: absolute;
+    image-rendering: pixelated;
+    image-resolution: 150dppx;
+}
+
+/* Styling for the top-right image */
+.container .images .top-right {
+    right: 710px;
+    bottom: 154px;
+    height: 55px;
+    position: absolute;
+}
+
+
+
+/* Keyframes animation for the background gradient */
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Styling for the wave element */
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Adjustments for the second wave element */
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+/* Adjustments for the third wave element */
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+/* Keyframes animation for the wave movement */
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
